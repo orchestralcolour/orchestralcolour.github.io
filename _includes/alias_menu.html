@@ -1,0 +1,11 @@
+<div class="btn-group">
+    <button class="btn btn dropdown-toggle" data-toggle="dropdown" href="#">
+        {{ alias }}
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        {% for person in site.data.groups[alias] %}
+            <li><a href="/person/{{ person[1] }}/">{{ person[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</div><br />

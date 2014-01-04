@@ -1,0 +1,133 @@
+---
+layout: default
+---
+{% assign release = site.data.releases[page.title] %}
+
+<div class="row musician-title release-title">
+    <div class="span9">
+        <a id="home-btn" href="/"></a>
+        <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{% if release.data %}{{ release.date | date_to_string }}{% endif %}</span>
+    </div>
+    <div class="span3">
+        <ul class="nav nav-pills">
+        <li class="active">
+            <a class="slide-left" href="#">Tracks</a>
+        </li>
+        <li><a class="slide-right" href="#">Info</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span4">
+        <p><span class="">- Performed by -</span></p>
+        {% for alias in release.aliases %}
+            {% assign alias=alias %}{% include alias_menu.html %}
+        {% endfor %}
+    </div>
+</div>
+
+<div class="span12 slider-hider">
+    <div class="slider">
+        <div class="track-container">
+            <div class="player inline">
+
+                <div class="row">
+                    <div class="span3 offset0">{% assign i=0 %}{% include track.html %}</div>
+                    <div class="span4 offset1">{% assign i=1 %}{% include track.html %}</div>
+                    <div class="span3 offset0">{% assign i=2 %}{% include track.html %}</div>
+                </div>
+
+                {% assign len=release.tracks.size %}
+                {% if len > 3 %}
+                    <div class="row">
+                        <div class="span3 offset1">{% assign i=3 %}{% include track.html %}</div>
+                        <div class="span5 offset1">{% assign i=4 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 5  %}
+                    <div class="row">
+                        <div class="span3 offset0">{% assign i=5 %}{% include track.html %}</div>
+                        <div class="span3 offset1">{% assign i=6 %}{% include track.html %}</div>
+                        <div class="span4 offset1">{% assign i=7 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 8  %}
+                    <div class="row">
+                        <div class="span2 offset2">{% assign i=8 %}{% include track.html %}</div>
+                        <div class="span4 offset2">{% assign i=9 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}
+
+                {% if len > 10  %}
+                    <div class="row">
+                        <div class="span3 offset0">{% assign i=10 %}{% include track.html %}</div>
+                        <div class="span3 offset1">{% assign i=11 %}{% include track.html %}</div>
+                        <div class="span4 offset1">{% assign i=12 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 13  %}
+                    <div class="row">
+                        <div class="span4 offset2">{% assign i=13 %}{% include track.html %}</div>
+                        <div class="span5 offset0">{% assign i=14 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 15  %}
+                    <div class="row">
+                        <div class="span4 offset0">{% assign i=15 %}{% include track.html %}</div>
+                        <div class="span4 offset1">{% assign i=16 %}{% include track.html %}</div>
+                        <div class="span3 offset0">{% assign i=17 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 18  %}
+                    <div class="row">
+                        <div class="span4 offset0">{% assign i=18 %}{% include track.html %}</div>
+                        <div class="span4 offset2">{% assign i=19 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}
+
+                {% if len > 20  %}
+                    <div class="row">
+                        <div class="span3 offset1">{% assign i=20 %}{% include track.html %}</div>
+                        <div class="span3 offset1">{% assign i=21 %}{% include track.html %}</div>
+                        <div class="span4 offset0">{% assign i=22 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 23  %}
+                    <div class="row">
+                        <div class="span4 offset3">{% assign i=23 %}{% include track.html %}</div>
+                        <div class="span4 offset0">{% assign i=24 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 25  %}
+                    <div class="row">
+                        <div class="span3 offset0">{% assign i=25 %}{% include track.html %}</div>
+                        <div class="span4 offset1">{% assign i=26 %}{% include track.html %}</div>
+                        <div class="span3 offset0">{% assign i=27 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}{% if len > 28  %}
+                    <div class="row">
+                        <div class="span4 offset0">{% assign i=28 %}{% include track.html %}</div>
+                        <div class="span4 offset2">{% assign i=29 %}{% include track.html %}</div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div id='release-description'><p>{{ content }}</p></div>
+    </div>
+</div>
+{% if release.cover %}
+    <a target="_blank" class="thumb" href="/assets/img/{{ release.cover }}">
+        <img class="diamond" src="/assets/img/200x200_{{ release.cover }}" />
+    </a>
+{% endif %}
+
+<script type="text/javascript">
+    $(function() {
+        var track = $('.player audio')[0];
+        Player.play(track);
+        $('.player .control').click(function(event) {
+            event.preventDefault();
+            var track = $(this).siblings('audio')[0]
+            if (track.paused == false) {
+                Player.pause(track);
+            } else {
+                Player.play(track);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,40 @@
+---
+layout: default
+title: Orchestral Colour
+---
+
+<div class="player vertical">
+    <a href="#" class="control"></a><br />
+    <a class="credit" id="title" href="#"></a>
+    <a class="credit" id="alias" href="#"></a>
+
+    {% for release_key in site.data.grids['Default'] %}
+        {% assign release = site.data.releases[release_key] %}
+        {% for track in release.tracks %}
+            {% include audio.html %}
+        {% endfor %}
+    {% endfor %}
+</div>
+{% assign grid_key='Default' %}{% include grid.html %}
+
+<script type="text/javascript">
+    $(function() {
+        var tracks = $('.player audio');
+        var track = tracks[getRandomInt(0, tracks.length - 1)];
+
+        var title = $(track).data('title');
+        var aliases = $(track).data('aliases');
+
+        updateDisplay(vClean(title), vClean(aliases[0]), $(track).data('url'));
+        Player.play(track);
+
+        $('.player .control').click(function(event) {
+            event.preventDefault();
+            if (track.paused == false) {
+                Player.pause(track);
+            } else {
+                Player.play(track);
+            }
+        });
+    });
+</script>

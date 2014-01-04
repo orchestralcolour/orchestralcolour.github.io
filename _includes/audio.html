@@ -1,0 +1,1 @@
+<audio src="{{ track[1] }}" data-url="{{ release.url }}" data-title="{{ track[0] }}" data-aliases='[{% for alias in release.aliases %}"{{ alias }}"{% if forloop.last != true %},{% endif %}{% endfor %}]' preload="none"></audio>
