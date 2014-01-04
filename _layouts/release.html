@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign release = site.data.releases[page.title] %}
 
-<div class="row musician-title release-title">
+<div class="row person-title">
     <div class="span9">
         <a id="home-btn" href="/"></a>
         <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{% if release.data %}{{ release.date | date_to_string }}{% endif %}</span>
@@ -21,9 +21,7 @@ layout: default
 <div class="row">
     <div class="span4">
         <p><span class="">- Performed by -</span></p>
-        {% for alias in release.aliases %}
-            {% assign alias=alias %}{% include alias_menu.html %}
-        {% endfor %}
+        {% for alias in release.aliases %}{% assign alias=alias %}{% include alias_menu.html %}{% endfor %}
     </div>
 </div>
 

@@ -2,28 +2,40 @@
 layout: default
 ---
 
-<div class="row musician-title release-title">
+<div class="row person-title">
     <div class="span9">
         <a id="home-btn" href="/"></a>
         <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{% if page.aka %}a.k.a. {{ page.aka }}{% endif %}</span>
     </div>
-    <div class="span8">
-        <!-- <div id='person-description'><p>{{ content }}</p></div> -->
+<!--     <div class="span3">
         <a target="_blank" class="thumb snapshot" href="/assets/img/{{ page.headshot }}">
             <img width=175 height=175 src="/assets/img/{{ page.headshot }}" />
         </a>
+    </div>
+ -->    <div class="span3">
+        <ul class="nav nav-pills">
+        <li class="active">
+            <a class="slide-left" href="#">Releases</a>
+        </li>
+        <li><a class="slide-right" href="#">Info</a></li>
+        </ul>
     </div>
 </div>
 
 <div class="row">
     <div class="span4">
     {% if page.member_of %}
-        <p><span class="member-of">- Member of -</span></p>
-        {% for alias in page.member_of %}
-            {% include alias_menu.html %}
-        {% endfor %}
+        <p>- Member of -</p>
+        {% for alias in page.member_of %}{% include alias_menu.html %}{% endfor %}
     {% endif %}
     </div>
 </div>
 
-{% assign grid_key=page.title %}{% include grid.html %}
+<div class="span12 slider-hider">
+    <div class="slider">
+        <div class="track-container">
+            {% assign grid_key=page.title %}{% include grid.html %}
+        </div>
+        <div id='release-description'><p>{{ content }}</p></div>
+    </div>
+</div>

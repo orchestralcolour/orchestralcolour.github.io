@@ -66,9 +66,6 @@ a#home-btn:hover {
 .dropdown-menu li {
   text-align: left; }
 
-.release-title {
-  margin-top: 14px; }
-
 .diamond {
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -76,7 +73,7 @@ a#home-btn:hover {
   -webkit-transform: rotate(45deg);
   -o-transform: rotate(45deg); }
 
-#person-description p:first-child:first-letter, #release-description p:first-child:first-letter {
+#release-description p:first-child:first-letter {
   float: left;
   color: #903;
   font-size: 75px;
@@ -100,28 +97,19 @@ a#home-btn:hover {
   overflow: hidden;
   margin-top: 25px; }
 
-.slider-arrow {
-  font-size: 30px;
-  position: absolute;
-  top: 20px;
-  cursor: pointer; }
-
-.slider-arrow.right {
-  right: 20px; }
-
-.slider-arrow.left {
-  left: 20px;
-  display: none; }
-
-.musician-title .nav-pills a {
-  background-color: white;
-  color: inherit;
-  text-decoration: none; }
-
-.musician-title .nav-pills a:hover, .musician-title .nav-pills li.active {
-  background-color: white;
-  color: inherit;
-  text-decoration: underline; }
+.person-title {
+  margin-top: 14px;
+  margin-bottom: 14px; }
+  .person-title ul.nav-pills {
+    margin: 0; }
+    .person-title ul.nav-pills a {
+      background-color: white;
+      color: inherit;
+      text-decoration: none; }
+    .person-title ul.nav-pills a:hover, .person-title ul.nav-pills li.active {
+      background-color: white;
+      color: inherit;
+      text-decoration: underline; }
 
 /*** face ***/
 .face-box {
@@ -167,32 +155,26 @@ hr.dark {
   margin-top: 10px;
   margin-bottom: 0px; }
 
-.row.musician-title a.thumb {
-  position: absolute;
-  top: -23px;
-  right: 0; }
-
-.row.musician-title {
+.row.person-title {
   position: relative; }
-
-.row.musician-title h1 {
-  margin: 0;
-  padding: 0;
-  display: inline; }
-
-.row.musician-title span.aka {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-family: monospace;
-  letter-spacing: normal;
-  line-height: 20px; }
+  .row.person-title a.thumb {
+    position: absolute;
+    top: -23px;
+    right: 0; }
+  .row.person-title h1 {
+    margin: 0;
+    padding: 0;
+    display: inline; }
+  .row.person-title span.aka {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-family: monospace;
+    letter-spacing: normal;
+    line-height: 20px; }
 
 .row.musician-info p {
   position: relative; }
-
-span.member-of {
-  color: lightpink; }
 
 .snapshot {
   transform: rotate(7deg);
