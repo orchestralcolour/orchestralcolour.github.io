@@ -6,7 +6,7 @@ layout: default
 <div class="row person-title">
     <div class="span9">
         <a id="home-btn" href="/"></a>
-        <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{% if release.data %}{{ release.date | date_to_string }}{% endif %}</span>
+        <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{{ release.date }}</span>
     </div>
     <div class="span3">
         <ul class="nav nav-pills">
@@ -104,7 +104,6 @@ layout: default
                 {% endif %}
             </div>
         </div>
-
         <div id='release-description'><p>{{ content }}</p></div>
     </div>
 </div>

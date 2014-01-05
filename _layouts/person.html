@@ -7,17 +7,16 @@ layout: default
         <a id="home-btn" href="/"></a>
         <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{% if page.aka %}a.k.a. {{ page.aka }}{% endif %}</span>
     </div>
-<!--     <div class="span3">
+    <div class="span3">
         <a target="_blank" class="thumb snapshot" href="/assets/img/{{ page.headshot }}">
             <img width=175 height=175 src="/assets/img/{{ page.headshot }}" />
         </a>
-    </div>
- -->    <div class="span3">
+
         <ul class="nav nav-pills">
         <li class="active">
             <a class="slide-left" href="#">Releases</a>
-        </li>
-        <li><a class="slide-right" href="#">Info</a></li>
+        </li><br />
+        <li><a class="slide-right" href="#">Bio</a></li>
         </ul>
     </div>
 </div>
@@ -33,9 +32,9 @@ layout: default
 
 <div class="span12 slider-hider">
     <div class="slider">
+        <div id='release-description'><p>{{ content }}</p></div>
         <div class="track-container">
             {% assign grid_key=page.title %}{% include grid.html %}
         </div>
-        <div id='release-description'><p>{{ content }}</p></div>
     </div>
 </div>
