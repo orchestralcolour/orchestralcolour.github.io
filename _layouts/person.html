@@ -3,20 +3,18 @@ layout: default
 ---
 
 <div class="row person-title">
-    <div class="span9">
+    <div class="span8">
         <a id="home-btn" href="/"></a>
-        <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{% if page.aka %}a.k.a. {{ page.aka }}{% endif %}</span>
+        <h1 class="musician-name">{{ page.title }} </h1>{% if page.aka %}<br><span class="aka">a.k.a. {{ page.aka }}</span>{% endif %}
     </div>
     <div class="span3">
         <a target="_blank" class="thumb snapshot" href="/assets/img/{{ page.headshot }}">
             <img width=175 height=175 src="/assets/img/{{ page.headshot }}" />
         </a>
 
-        <ul class="nav nav-pills">
-        <li class="active">
-            <a class="slide-left" href="#">Releases</a>
-        </li><br />
-        <li><a class="slide-right" href="#">Bio</a></li>
+        <ul class="nav nav-pills vertical">
+            <li class="active"><a class="slide-left" href="#">Music</a></li>
+            <li><a class="slide-right" href="#">Bio</a></li>
         </ul>
     </div>
 </div>
@@ -30,11 +28,13 @@ layout: default
     </div>
 </div>
 
-<div class="span12 slider-hider">
-    <div class="slider">
-        <div id='release-description'><p>{{ content }}</p></div>
-        <div class="track-container">
-            {% assign grid_key=page.title %}{% include grid.html %}
+<div class="row">
+    <div class="span12 slider-hider">
+        <div class="slider">
+            <div class="track-container">
+                {% assign grid_key=page.title %}{% include grid.html %}
+            </div>
+            <div id='release-description'><p>{{ content }}</p></div>
         </div>
     </div>
 </div>

@@ -8,10 +8,12 @@ title: Orchestral Colour
     <a class="credit" id="title" href="#"></a>
     <a class="credit" id="alias" href="#"></a>
 
-    {% for release_key in site.data.grids['Default'] %}
-        {% assign release = site.data.releases[release_key] %}
-        {% for track in release.tracks %}
-            {% include audio.html %}
+    {% for faces in site.data.grids['Default'] %}
+        {% for face in faces %}
+            {% assign release = site.data.releases[face] %}
+            {% for track in release.tracks %}
+                {% include audio.html %}
+            {% endfor %}
         {% endfor %}
     {% endfor %}
 </div>

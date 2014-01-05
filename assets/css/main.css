@@ -66,12 +66,13 @@ a#home-btn:hover {
 .dropdown-menu li {
   text-align: left; }
 
-.diamond {
+.cover {
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg); }
+  -o-transform: rotate(45deg);
+  margin-left: 42px; }
 
 #release-description p:first-child:first-letter {
   float: left;
@@ -101,7 +102,11 @@ a#home-btn:hover {
   margin-top: 14px;
   margin-bottom: 14px; }
   .person-title ul.nav-pills {
+    position: absolute;
     margin: 0; }
+    .person-title ul.nav-pills.vertical li {
+      float: none;
+      margin-left: 40px; }
     .person-title ul.nav-pills a {
       background-color: white;
       color: inherit;
@@ -110,6 +115,8 @@ a#home-btn:hover {
       background-color: white;
       color: inherit;
       text-decoration: underline; }
+    .person-title ul.nav-pills li {
+      float: right; }
 
 /*** face ***/
 .face-box {
@@ -167,7 +174,7 @@ hr.dark {
     display: inline; }
   .row.person-title span.aka {
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 200px;
     font-size: 14px;
     font-family: monospace;
     letter-spacing: normal;

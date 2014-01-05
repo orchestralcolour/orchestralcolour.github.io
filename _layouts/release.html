@@ -6,14 +6,12 @@ layout: default
 <div class="row person-title">
     <div class="span9">
         <a id="home-btn" href="/"></a>
-        <h1 class="musician-name">{{ page.title }} </h1><span class="aka">{{ release.date }}</span>
+        <h1 class="musician-name">{{ page.title }} </h1><br><span class="aka">{{ release.date }}</span>
     </div>
     <div class="span3">
         <ul class="nav nav-pills">
-        <li class="active">
-            <a class="slide-left" href="#">Tracks</a>
-        </li>
         <li><a class="slide-right" href="#">Info</a></li>
+        <li class="active"><a class="slide-left" href="#">Tracks</a></li>
         </ul>
     </div>
 </div>
@@ -108,8 +106,8 @@ layout: default
     </div>
 </div>
 {% if release.cover %}
-    <a target="_blank" class="thumb" href="/assets/img/{{ release.cover }}">
-        <img class="diamond" src="/assets/img/200x200_{{ release.cover }}" />
+    <a target="_blank" href="/assets/img/{{ release.cover }}">
+        <img class="cover" src="/assets/img/200x200_{{ release.cover }}" />
     </a>
 {% endif %}
 
