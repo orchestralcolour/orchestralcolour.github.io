@@ -66,6 +66,7 @@ a#home-btn:hover {
 .track-container .track {
     position: relative;
     width: 14px;
+    height: 24px;
     margin: 0 auto;
 }
 
@@ -134,13 +135,15 @@ a#home-btn:hover {
 .person-title {
     margin-top: 14px;
     margin-bottom: 14px;
+
     ul.nav-pills {
-        &.vertical li {
-            float: none;
-            margin-left: 40px
-        }
-        position: absolute;
         margin: 0;
+        float: right;
+        &.vertical {
+            position: absolute;
+            margin-left: 40px;
+            li { float: none; }
+        }
         a  {
             background-color: white;
             color: inherit;
@@ -150,9 +153,6 @@ a#home-btn:hover {
             background-color: white;
             color: inherit;
             text-decoration: underline;
-        }
-        li {
-            float: right;
         }
     }
 }

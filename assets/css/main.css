@@ -45,6 +45,7 @@ a#home-btn:hover {
 .track-container .track {
   position: relative;
   width: 14px;
+  height: 24px;
   margin: 0 auto; }
 
 .track a {
@@ -102,11 +103,13 @@ a#home-btn:hover {
   margin-top: 14px;
   margin-bottom: 14px; }
   .person-title ul.nav-pills {
-    position: absolute;
-    margin: 0; }
-    .person-title ul.nav-pills.vertical li {
-      float: none;
+    margin: 0;
+    float: right; }
+    .person-title ul.nav-pills.vertical {
+      position: absolute;
       margin-left: 40px; }
+      .person-title ul.nav-pills.vertical li {
+        float: none; }
     .person-title ul.nav-pills a {
       background-color: white;
       color: inherit;
@@ -115,8 +118,6 @@ a#home-btn:hover {
       background-color: white;
       color: inherit;
       text-decoration: underline; }
-    .person-title ul.nav-pills li {
-      float: right; }
 
 /*** face ***/
 .face-box {

@@ -2,7 +2,7 @@
 
 {% if track %}
 	<div class="track">
-	    <a href="#" class="control {% if i > 0 %}play{% endif %}"></a><br />
+	    <a href="#" class="control {% if i > 0 %}play{% endif %}"></a>
 	   	{% include audio.html %} 
 	</div>
 	<a href="#">{{ i | plus:1 }}. {{ track[0] }}</a>
