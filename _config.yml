@@ -1,4 +1,4 @@
 name: Orchestral Colour
 markdown: redcarpet
-pygments: false 
+highlighter: highlighter
 permalink: /:title/
