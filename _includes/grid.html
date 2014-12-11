@@ -9,20 +9,20 @@
                 {% capture key %}{{ face[0] }}{% endcapture %}
                 {% assign release = site.data.releases[key] %}
                 <a class="feature left-eye" style="width:100px;height:100px;" href="{{ release.url }}">
-                <img class="feature left-eye" src="/assets/img/100x100_{{ release.cover }}" /></a>
+                <img class="feature left-eye" src="/assets/img/covers/thumbs/100x100_{{ release.cover }}" /></a>
 
                 {% if face[1] %}
                     {% capture key %}{{ face[1] }}{% endcapture %}
                     {% assign release = site.data.releases[key] %}
                     <a class="feature right-eye" style="width:96px;height:96px;" href="{{ release.url }}">
-                    <img class="feature right-eye" src="/assets/img/100x100_{{ release.cover }}" /></a>
+                    <img class="feature right-eye" src="/assets/img/covers/thumbs/100x100_{{ release.cover }}" /></a>
                 {% endif %}
 
                 {% if face[2] %}
                     {% capture key %}{{ face[2] }}{% endcapture %}
                     {% assign release = site.data.releases[key] %}
                     <a class="feature mouth" style="width:75px;height:75px;" href="{{ release.url }}">
-                    <img class="feature mouth" src="/assets/img/100x100_{{ release.cover }}" /></a>
+                    <img class="feature mouth" src="/assets/img/covers/thumbs/100x100_{{ release.cover }}" /></a>
                 {% endif %}
             </div>
         </div>
