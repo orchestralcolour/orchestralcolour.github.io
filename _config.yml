@@ -1,6 +1,5 @@
 name: Orchestral Colour
 markdown: redcarpet
-highlighter: highlighter
 permalink: /:title/
 gems:
   - jekyll-sitemap
