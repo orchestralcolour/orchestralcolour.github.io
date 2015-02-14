@@ -3,3 +3,4 @@ markdown: redcarpet
 permalink: /:title/
 gems:
   - jekyll-sitemap
+url: http://orchestralcolour.com
