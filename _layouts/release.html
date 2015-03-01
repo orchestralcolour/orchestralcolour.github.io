@@ -4,14 +4,15 @@ layout: default
 {% assign release = site.data.releases[page.title] %}
 
 <div class="row person-title">
-    <div class="span9">
+    <div class="span8">
         <a id="home-btn" href="/"></a>
         <h1 class="musician-name">{{ page.title }} </h1><br><span class="aka">{{ release.date }}</span>
     </div>
-    <div class="span3">
+    <div class="span4">
         <ul class="nav nav-pills">
             <li class="active"><a class="slide-left" href="#">Tracks</a></li>
             <li><a class="slide-right" href="#">Info</a></li>
+            <li><a href="{{ release.download }}">Download</a></li>
         </ul>
     </div>
 </div>
